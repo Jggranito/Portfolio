@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Sofia+Sans:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101630;
+    color: #f2f2f2;
+    /* font-family: 'roboto', sans-serif; */
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 400;
+    padding: 0em 5rem;
+}
+/* -------------------------------------------------------------------------------------- */
+.header {
+    width: 100%;
+    height: 5rem;
+    padding-right: 9.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: #101630;
+    letter-spacing: 1px;
+    z-index: 5;
+}
+.header h2{
+    margin-top: 0.8rem;
+}
+.header span {
+    color: #4FBBE1;
+}
+nav>ul {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+nav>ul>li span {
+    opacity: 0;
+}
+
+nav>ul>li:hover {
+    opacity: 1;
+    color: #4FBBE1;
+    transition: ease-in 0.2s;
+}
+nav>ul>li:hover span {
+    opacity: 1;
+    transition: ease-in 0.2s;
+}
+main {
+    /* margin-top: 6rem; */
+    letter-spacing: 1px;
+}
+/* -------------------------------------------------------------------------------------- */
+#home {
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 4rem;
+}
+#home h1 {
+    text-transform: uppercase;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+#home h2 {
+    font-size: 4rem;
+    font-family: 'Cinzel', serif;
+    ;
+    line-height: 5rem;
+    color: #ffffff;
+}
+#home button {
+    width: 13rem;
+    background: linear-gradient(to right, #529AD9, #4330BF);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: ease-in 0.5s;
+}
+#home button:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, #796ec0, #4330BF);
+}
+/* -------------------------------------------------------------------------------------- */
+#about{
+    height: 90vh;
+    scroll-margin-top: 3.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5rem;
+}
+#about > div{
+    height: 23rem;
+    width: 33rem;
+    /* margin-right: 5rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#about p {
+    color: #7f8495;
+    margin-top: 1rem;
+}
+#about .habilities-container{
+    display: flex;
+    gap: 1.5rem;
+}
+#about .circle {
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid #4446b4;
+    border-radius: 2.5rem;
+    transition: ease-in 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#about .circle:hover {
+    transform: scale(1.2);
+}
+#about .circle > img {
+    width: 55%;
+    position: absolute;
+    transition: ease-in 0.4s;
+    top: 1rem;
+}
+#about .circle:hover > img {
+    width: 40%;
+    top: 0.5rem;
+}
+#about .circle > .linguage {
+    opacity: 0;
+    transition: ease-in 0.4s;
+    position: absolute;
+    top: 0;
+    font-size: 10px;
+}
+#about .circle:hover > .linguage {
+    opacity: 1;
+    top: 2rem;
+    font-size: 13px;
+}
+/* -------------------------------------------------------------------------------------- */
+#projects {
+    /* height: 90vh; */
+    width: 100%;
+    scroll-margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+#projects .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#projects .project{
+    width: 100%;
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+#projects .project .text-project{
+    width: 33rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#projects .project.p1 .temp-img{
+    width: 40%;
+    height: 22rem;
+    transition: ease-in 0.4s;
+    background-image: url('../image/projects/api_github_1.png');
+    background-size: cover;
+    background-position: center;
+}
+#projects .project.p1 .temp-img:hover{
+    background-image: url('../image/projects/api_github_2.png');
+    background-size: cover;
+    background-position: center;
+}
+#projects .project{
+    scroll-margin-top: 10rem;
+}
+#projects .project.p2 .temp-img{
+    width: 40%;
+    height: 22rem;
+    transition: ease-in 0.4s;
+    background-image: url('../image/projects/pokedex_1.png');
+    background-size: cover;
+    background-position: center;
+}
+#projects .project.p2 .temp-img:hover{
+    background-image: url('../image/projects/pokedex_2.png');
+    background-size: cover;
+    background-position: center;
+}
+/* -------------------------------------------------------------------------------------- */
+footer{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: linear-gradient(to right, #4330BF, #529AD9); */
+}
